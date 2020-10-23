@@ -1,0 +1,53 @@
+@model Film
+@{ Layout = "_Layout"; ViewBag.Title = "Add a Film";}
+
+
+<form asp-action = "AddFilm" method="POST"> 
+  <div class="form-group">
+    <label for="FilmName">FilmName</label>
+    <input type="text" class="form-control" id="FilmName" name="FilmName" placeholder="Enter FilmName" required>
+  </div>
+  <div class="form-group">
+    <label for="Director">Director</label>
+    <input type="text" class="form-control" id="Director" name="Director" placeholder="Enter Director Name" required>
+  </div>
+    <div class="form-group">
+    <label for="Hero">Hero</label>
+    <input type="text" class="form-control" id="Hero" name="Hero"  placeholder="Enter Hero Name" required>
+  </div>
+     <div class="form-group">
+    <label for="Heroine">Heroine</label>
+    <input type="text" class="form-control" id="Heroine" name="Heroine" placeholder="Enter Heroine Name" required>
+  </div>
+     <div class="form-group">
+    <label for="Rating">Rating</label>
+    <input type="text" class="form-control" id="Rating" name="Rating" placeholder="Enter Rating" required>
+  </div>
+</div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@if (Model != null)
+{
+       <h2>Film</h2>
+    <table class="table table-sm table-striped table-bordered m-2">
+        <thead>
+            <tr>
+                <th>FilmName</th>
+                <th>Director</th>
+                <th>Hero</th>
+                <th>Heroine</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.FilmName</td>
+                <td>@Model.Director</td>
+                <td>@Model.Hero</td>
+                <td>@Model.Heroine</td>
+                <td>@Model.Rating</td>
+            </tr>
+        </tbody>
+    </table>
+}
