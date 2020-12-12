@@ -29,13 +29,13 @@
                 <td>@r.Rating</td>
                 <td>
                     <a asp-action="UpdateFilm" asp-route-id="@r.Id">
-                        <img src="/icon/edit.png" />
+                        <img src="\edit.png" />
                     </a>
                 </td>
                 <td>
                     <form asp-action="DeleteFilm" method="post">
                         <input type="hidden" value="@r.Id" name="FilmId" />
-                        <input type="image" src="/icon/close.png" />
+                        <input type="image" src="C:\Users\appaa rao\Documents\Film_Application\FilmsApp\Views\icon\close.png" />
                     </form>
                 </td>
             </tr>
@@ -49,7 +49,14 @@
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
-        ["Film", "Rating", { role: "style" } ];
+        ["Film", "Rating", { role: "style" } ],
+        ["F2", 70 ,"Blue"],
+        ["Khaleja", 55 ,"Blue"],
+        ["Sriramadasu", 98 ,"Blue"],
+        ["RRR", 82 ,"Blue"],
+        ["KGF", 92 ,"Blue"],
+        ["Saankuduntit", 95 ,"Blue"],
+        ["Raja The Great", 85 ,"Blue"]
       ]);
 
       var view = new google.visualization.DataView(data);
