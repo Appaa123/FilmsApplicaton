@@ -25,7 +25,7 @@ namespace FilmsApi.Services
             _Films.Find<Film>(film => film.Id == id).FirstOrDefault();
 
         public List<Film> GetFilmName(string name) => 
-            _Films.Find<Film>(film => film.FilmName == name).ToList();
+            _Films.Find<Film>(film => film.FilmName.ToLower() == name.ToLower()).ToList();
 
         public Film Create(Film film)
         {

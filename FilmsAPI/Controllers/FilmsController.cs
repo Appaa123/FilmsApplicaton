@@ -28,7 +28,7 @@ namespace FilmsApi.Controllers
 
         public ActionResult<List<Film>> GetFilmName(string name){
 
-            var film = _filmService.GetFilmName(name);
+            var film = _filmService.GetFilmName(name.ToLower());
 
             if (film == null){
                 return NotFound();
